@@ -63,16 +63,48 @@
   font-style: normal;
 }
 
+
 h1, textpath {
   font-family: 'Recoleta', sans-serif;
+  font-size: 30px;
 }
 
 p,h3,h4,h5,h6 {
   font-family: 'Inter', sans-serif;
+  
 }
 
 body{
   @apply selection:bg-primary selection:text-light
+}
+
+
+
+/* about */
+#about p{
+  font-size: 20px;
+  color: #f6f6e9;
+}
+
+#about h1{
+
+  color: #f8e894;
+}
+
+
+@media (min-width: 600px) {
+  #about div {
+    margin: 0 5vw 0;
+  }
+  .helpOrSponsor{
+    padding-left: 5vw;
+  }
+}
+@media (max-width: 600px) {
+  
+  .helpOrSponsor{
+    padding-left: 0;
+  }
 }
 
 @layer base {
@@ -80,3 +112,4 @@ html {
   @apply scroll-smooth;
 }
 }
+

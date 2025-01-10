@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
-
+import '../styles/landing.css';
 const Landing = () => {
     const [rotateDuck, setRotateDuck] = useState(false);
     const [quacks, setQuacks] = useState<string[]>([]);
@@ -38,7 +38,7 @@ const Landing = () => {
     };
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden flex justify-center bg-light">
+        <div className="relative h-screen overflow-hidden flex justify-center bg-light">
             <div className="flex flex-col mt-40 items-center gap-4">
                 <div className="relative">
                     <h1 className="inset-0 text-5xl md:text-7xl xl:text-8xl xl:text-[6.5rem] font-bold text-secondary lg:translate-y-1 translate-y-0.5 opacity-50">
@@ -73,7 +73,7 @@ const Landing = () => {
                 <div className="relative">
                     <button
                         onClick={duckClicked}
-                        className="absolute -top-28 left-32 sm:-top-8 sm:left-36 cursor-pointer scale-75 -translate-y-24 -translate-x-20 lg:scale-100 sm:scale-90 sm:-translate-y-12 lg:-translate-y-7 xl:translate-y-10 2xl:scale-110 2xl:translate-y-12 2xl:translate-x-14"
+                        className="absolute -top-10 left-32 sm:-top-8 sm:left-36 cursor-pointer scale-75 -translate-y-24 -translate-x-20 lg:scale-100 sm:scale-90 sm:-translate-y-12 lg:-translate-y-7 xl:translate-y-10 2xl:scale-110 2xl:translate-y-12 2xl:translate-x-14"
                     >
                         {quacks.map((quack, index) => (
                             <p key={index} className={`${quack} font-recoleta`}>quack</p>
@@ -86,12 +86,12 @@ const Landing = () => {
                     </button>
                     <img
                         src="water.svg"
-                        className="w-full scale-125 md:scale-110 sm:translate-y-10 lg:translate-y-14 xl:translate-y-28 z-30"
+                        className="w-full scale-125 md:scale-110 sm:translate-y-10 lg:translate-y-14 xl:translate-y-28 z-30 "
                         alt=""
                     />
                 </div>
-                <div className="flex justify-between md:mx-10 mx-2 absolute md:bottom-5 bottom-1 text-light">
-                    <div className="flex gap-2">
+                <div className="helpOrSponsor flex absolute md:bottom-5 bottom-1 text-light">
+                    <div className="flex gap-5 mx-2">
                         <p className="md:text-lg font-recoleta">
                             Need <a
                                 className="underline underline-offset-2 transition-all hover:underline-offset-4"
